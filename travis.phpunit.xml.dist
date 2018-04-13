@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit verbose="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         colors="false"
+         forceCoversAnnotation="false"
+         processIsolation="false"
+         bootstrap="tests/bootstrap.php">
+
+  <!-- Test suites to be run -->
+  <testsuites>
+    <testsuite name="Entity Tests Travis">
+      <directory>./tests/</directory>
+    </testsuite>
+  </testsuites>
+
+  <!-- Filters for code coverage reporting -->
+  <filter>
+      <whitelist>
+        <directory>./</directory>
+        <exclude>
+          <directory>./tests</directory>
+          <directory>./vendor</directory>
+        </exclude>
+      </whitelist>
+  </filter>
+
+  <!-- Logging -->
+  <logging>
+      <log type="coverage-clover" target="tests/coverage/clover.xml" />
+      <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+      <log type="junit" target="tests/coverage/junit.xml" logIncompleteSkipped="false"/>
+  </logging>
+
+</phpunit>
