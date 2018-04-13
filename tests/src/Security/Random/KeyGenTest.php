@@ -52,7 +52,6 @@ class SecurityRandomKeyGenTest extends AbstractTest
     public function testCiKey()
     {
         $key = KeyGen::getKey('ci_key');
-        var_dump($key);
         $this->assertTrue(!empty($key));
         $this->assertEquals(strlen($key), 32);
     }

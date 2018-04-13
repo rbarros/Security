@@ -28,7 +28,7 @@ class KeyGen
 
     public static $instance;
 
-    private $types = [
+    private $types = array(
          'decent_pw'    => 'Memorable Passwords - Perfect for securing your computer or mobile device, or somewhere brute force is detectable.'
         ,'strong_pw'    => 'Strong Passwords - Robust enough to keep your web hosting account secure.'
         ,'ft_knox_pw'   => 'Fort Knox Passwords - Secure enough for almost anything, like root or administrator passwords.'
@@ -39,7 +39,7 @@ class KeyGen
         ,'128_wep'      => '128-bit WEP Keys'
         ,'152_wep'      => '152-bit WEP Keys'
         ,'256_wep'      => '256-bit WEP Keys'
-    ];
+    );
 
     public static function getInstance()
     {
@@ -51,13 +51,13 @@ class KeyGen
     }
 
     private function keyGen(
-        int $length = 0,
-        bool $useLowerCase = true,
-        bool $useUpperCase = true,
-        bool $useNumbers = true,
-        bool $useSpecial = true,
-        bool $useHex = false
-    ): string {
+        $length = 0,
+        $useLowerCase = true,
+        $useUpperCase = true,
+        $useNumbers = true,
+        $useSpecial = true,
+        $useHex = false
+    ) {
         $chars = '';
         $key = '';
 
@@ -93,7 +93,7 @@ class KeyGen
         return (float)rand()/(float)getrandmax();
     }
 
-    public static function getKey(string $strength = null): string
+    public static function getKey($strength = null)
     {
         $self = self::getInstance();
         switch ($strength) {
