@@ -2,7 +2,7 @@
 The Secure Password &amp; Keygen Generator
 Inspired by [randomkeygen](https://randomkeygen.com/#)
 
-![GPL](https://img.shields.io/badge/license-GPLv3-lightgrey.svg?style=flat-square)
+![MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square)
 ![PHP](https://img.shields.io/badge/language-PHP%20%3E%3D%207.0-green.svg)
 [![Build Status](https://travis-ci.org/rbarros/RandomKeyGen.svg?branch=master)](https://travis-ci.org/rbarros/RandomKeyGen)
 [![Code Climate](https://codeclimate.com/github/rbarros/RandomKeyGen/badges/gpa.svg)](https://codeclimate.com/github/rbarros/RandomKeyGen)
@@ -47,6 +47,6 @@ string(32) "YRT16XIkbBjqPkczWlgIRLAqzhFglIt0"
 * **v1.0.0** - 2018-04-13
    - Initial release.
 
-##License
+## License
 
-![GPL](http://www.gnu.org/graphics/gplv3-88x31.png)
+The Slim.js is licensed under the MIT license. See [License File](LICENSE) for more information.
