@@ -10,11 +10,11 @@
 namespace Security\Random;
 
 /**
- * Gerar chaves aleatórias para o sistema
+ * Generate random keys for the system
  *
  * @package Saga
  * @subpackage Security
- * @author Ramon Barros <ramon@sagasistemas.com.br>
+ * @author Ramon Barros <contato@ramon-barros.com>
  * @copyright 2018 Saga Sistemas
  * @link(RandomKeyGen, https://randomkeygen.com/#)
  */
@@ -91,6 +91,12 @@ class KeyGen
     private function random()
     {
         return (float)rand()/(float)getrandmax();
+    }
+
+    public static function getType($strength = null)
+    {
+        $self = self::getInstance();
+        return !empty($self->types[$strength]) ? $self->types[$strength] : null;
     }
 
     public static function getKey($strength = null)

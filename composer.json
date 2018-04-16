@@ -1,5 +1,5 @@
 {
-    "name": "rbarros/randomkeygen",
+    "name": "rbarros/security",
     "description": "The Secure Password &amp; Keygen Generator",
     "type": "git",
     "version": "1.0.0",
@@ -22,5 +22,7 @@
             "Security\\" : "src/Security"
         }
     },
-    "minimum-stability": "dev"
+    "config": {
+        "bin-dir": "bin/"
+    }
 }

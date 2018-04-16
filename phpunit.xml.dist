@@ -33,6 +33,7 @@
   <!-- Logging -->
   <logging>
       <log type="coverage-clover" target="tests/coverage/clover.xml" />
+      <log type="coverage-html" target="tests/coverage/html" highlight="true" />
       <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
       <log type="junit" target="tests/coverage/junit.xml" logIncompleteSkipped="false"/>
   </logging>

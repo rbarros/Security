@@ -1,4 +1,4 @@
-# RandomKeyGen
+# Security
 The Secure Password &amp; Keygen Generator
 Inspired by [randomkeygen](https://randomkeygen.com/#)
 
@@ -14,14 +14,15 @@ Você pode instalar com Composer (recomendado) ou manualmente.
 $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar install --prefer-source
 ```
+
 ## Tests
 
-Tests sem Coverage
+Tests
 ```
 $ vendor/bin/phpunit --configuration phpunit.xml
 ```
 
-Tests com coverage
+Tests Coverage
 ```
 $ vendor/bin/phpunit --configuration phpunit.xml.dist
 ```
@@ -34,12 +35,44 @@ $ vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 _(Coming soon)_
 
 ## Examples
+
+
+### KeyGen - The Secure Password & Keygen Generator
+
 ```php
 require 'vendor/autoload.php';
 
-$key = new RandomKeyGen::getKey('ci_key');
+$key = new Security\Random\KeyGen::getKey('ci_key');
 var_dump($key);
 string(32) "YRT16XIkbBjqPkczWlgIRLAqzhFglIt0"
+```
+
+### OpenSSL - Public Key & Private Key
+
+Encrypting data with the public key and decrypting data with the private key.
+
+```
+$ openssl genrsa -out private.key 1024
+$ openssl rsa -in private.key -out public.pem -outform PEM -pubout
+```
+
+```php
+require 'vendor/autoload.php';
+
+$openssl = new OpenSSL();
+$openssl->setPublicFile('public.pem')
+        ->encrypt('Teste com o OpenSSL');
+
+$dataCrypt = $openssl->getDataCrypt();
+$dataKey = $openssl->getKey();
+
+var_dump($dataCrypt);
+var_dump($dataKey);
+
+$openssl->setPrivateFile('private.key')
+        ->decrypt($dataCrypt, $dataKey);
+
+var_dump($openssl->getDataDecrypt());
 ```
 
 ## Release History
