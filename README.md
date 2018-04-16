@@ -4,9 +4,9 @@ Inspired by [randomkeygen](https://randomkeygen.com/#)
 
 ![MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square)
 ![PHP](https://img.shields.io/badge/language-PHP%20%3E%3D%205.4-green.svg)
-[![Build Status](https://travis-ci.org/rbarros/RandomKeyGen.svg?branch=master)](https://travis-ci.org/rbarros/RandomKeyGen)
-[![Code Climate](https://codeclimate.com/github/rbarros/RandomKeyGen/badges/gpa.svg)](https://codeclimate.com/github/rbarros/RandomKeyGen)
-[![Test Coverage](https://codeclimate.com/github/rbarros/RandomKeyGen/badges/coverage.svg)](https://codeclimate.com/github/rbarros/RandomKeyGen/coverage)
+[![Build Status](https://travis-ci.org/rbarros/Security.svg?branch=master)](https://travis-ci.org/rbarros/Security)
+[![Code Climate](https://codeclimate.com/github/rbarros/Security/badges/gpa.svg)](https://codeclimate.com/github/rbarros/Security)
+[![Test Coverage](https://codeclimate.com/github/rbarros/Security/badges/coverage.svg)](https://codeclimate.com/github/rbarros/Security/coverage)
 
 Você pode instalar com Composer (recomendado) ou manualmente.
 
