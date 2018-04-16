@@ -61,18 +61,21 @@ require 'vendor/autoload.php';
 
 $openssl = new OpenSSL();
 $openssl->setPublicFile('public.pem')
-        ->encrypt('Teste com o OpenSSL');
+        ->encrypt('Test Encrypt Data with OpenSSL');
 
 $dataCrypt = $openssl->getDataCrypt();
 $dataKey = $openssl->getKey();
 
 var_dump($dataCrypt);
+string(40) "aGMFNEuZCgpcSr6HDW9tl3JEIJc+5uJyRl/VFGiG"
 var_dump($dataKey);
+string(172) "rCm45TK5xvcU+sNrYmZGpYxH1HZW84K0eLKfqSzbu7+J4d24/PMJDuUXth4ulRbxfdwEt8sphAn7kG9cQZ/9UHjnDfN5Ck1foZ3q08OvsyFsuDlefrSSWpRSRKFirg8X7ZnP+M0Amh2/ngBcCapUM9dh+ILobUV2aC6wgCGsTv8="
 
 $openssl->setPrivateFile('private.key')
         ->decrypt($dataCrypt, $dataKey);
 
 var_dump($openssl->getDataDecrypt());
+string(30) "Test Encrypt Data with OpenSSL"
 ```
 
 ## Release History
