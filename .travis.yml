@@ -17,4 +17,4 @@ before_script:
   - composer install
 
 script:
-  - vendor/bin/phpunit --configuration travis.phpunit.xml.dist
+  - bin/phpunit --configuration travis.phpunit.xml.dist
