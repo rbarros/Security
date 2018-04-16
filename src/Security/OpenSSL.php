@@ -69,7 +69,7 @@ class OpenSSL
     private $decryptedData;
 
     // Load the public key into an array
-    public function setPublicFile(string $file = null): OpenSSL
+    public function setPublicFile($file = null)
     {
         if (file_exists($file)) {
             $pem = @file_get_contents($file);
@@ -83,7 +83,7 @@ class OpenSSL
     }
 
     // Load the public key into an array
-    public function setPrivateFile(string $file = null): OpenSSL
+    public function setPrivateFile($file = null)
     {
         if (file_exists($file)) {
             $key = @file_get_contents($file);
@@ -97,7 +97,7 @@ class OpenSSL
     }
 
     // Encrypt the $message and return the $encryptedData and the $encryptedKeys
-    public function encrypt(string $message = null): OpenSSL
+    public function encrypt($message = null)
     {
         $this->message = $message;
         $this->result = openssl_seal(
@@ -120,7 +120,7 @@ class OpenSSL
     }
 
     // Decrypt the data with our $privateKey and store the result in $decryptedData
-    public function decrypt(string $encryptedData = null, string $encryptedKey = null): OpenSSL
+    public function decrypt($encryptedData = null, $encryptedKey = null)
     {
         $this->result = openssl_open(
             base64_decode($encryptedData),
