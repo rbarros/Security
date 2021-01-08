@@ -42,7 +42,7 @@ _(Coming soon)_
 ```php
 require 'vendor/autoload.php';
 
-$key = new Security\Random\KeyGen::getKey('ci_key');
+$key = Security\Random\KeyGen::getKey('ci_key');
 var_dump($key);
 string(32) "YRT16XIkbBjqPkczWlgIRLAqzhFglIt0"
 ```
